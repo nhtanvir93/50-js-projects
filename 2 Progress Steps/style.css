@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat@1&display=swap");
+
+:root {
+  --initial-progress-border: #808080;
+  --processed-progress-border: #26d492;
+  --disabled-background-fill: #cccccc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80vw;
+}
+
+.progress-container {
+  width: 400px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.progress-container::before {
+  content: "";
+  background-color: var(--initial-progress-border);
+  height: 2px;
+  position: absolute;
+  top: calc(50% - 2px);
+  width: 100%;
+  z-index: -1;
+}
+
+.progress {
+  background-color: var(--processed-progress-border);
+  content: "";
+  height: 2px;
+  position: absolute;
+  top: calc(50% - 2px);
+  transition: width 0.3s ease;
+  width: 0%;
+  z-index: -1;
+}
+
+.progress-step {
+  color: var(--initial-progress-border);
+  display: flex;
+  font-weight: 600;
+  justify-content: space-between;
+}
+
+.progress-step .circle {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid var(--initial-progress-border);
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  width: 30px;
+  transition: border 0.1s ease 0.3s, color 0.1s ease 0.3s;
+}
+
+.progress-step .circle.active {
+  border: 2px solid var(--processed-progress-border);
+  color: var(--processed-progress-border);
+}
+
+.btn {
+  background-color: var(--processed-progress-border);
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 6px 16px;
+}
+
+.btn:disabled {
+  background-color: var(--disabled-background-fill);
+  cursor: not-allowed;
+}
