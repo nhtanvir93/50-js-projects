@@ -1,11 +1,10 @@
 const choiceInput = document.getElementById("choices");
 const tags = document.getElementById("tags");
 
+choiceInput.focus();
+
 choiceInput.addEventListener("keyup", (event) => {
-  if (event.key === "Enter") {
-    removePreviousHighlightedChoice();
-    return highlightRandomChoice();
-  }
+  if (event.key === "Enter") return highlightRandomChoice();
 
   const choices = choiceInput.value;
   const currentChoices = choices
@@ -40,6 +39,8 @@ function getCurrentRandomIndex(length) {
 }
 
 function highlightRandomChoice() {
+  removePreviousHighlightedChoice();
+
   const choices = document.querySelectorAll(".choice");
   const choiceLength = choices.length;
   const times = 20;
