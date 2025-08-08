@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>FAQ</title>
+  </head>
+  <body>
+    <h1>Frequently Asked Questions</h1>
+    <div class="container">
+      <div class="faq">
+        <h3 class="faq-title">
+          What is System Design, and why is it important?
+        </h3>
+        <div class="faq-answer">
+          <p>
+            System design is the process of defining the architecture,
+            components, modules, interfaces, and data for a system to satisfy
+            specified requirements. It is critical for building scalable,
+            efficient, and maintainable systems that meet business needs and
+            handle expected (and unexpected) load and complexity.
+          </p>
+        </div>
+        <button type="button" class="faq-toggle-icon">
+          <i class="fa-solid fa-chevron-down"></i>
+          <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+      </div>
+      <div class="faq">
+        <h3 class="faq-title">
+          What is the difference between High-Level Design (HLD) and Low-Level
+          Design (LLD)?
+        </h3>
+        <div class="faq-answer">
+          <ul>
+            <li>
+              HLD (High-Level Design): Focuses on the system's
+              architecture—modules, components, relationships, and technologies
+              used.
+            </li>
+            <li>
+              LLD (Low-Level Design): Provides detailed implementation specifics
+              such as class diagrams, data structures, algorithms, and logic.
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="faq-toggle-icon">
+          <i class="fa-solid fa-chevron-down"></i>
+          <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+      </div>
+      <div class="faq">
+        <h3 class="faq-title">
+          What are key components of a scalable system design?
+        </h3>
+        <div class="faq-answer">
+          <ul>
+            <li>Load balancers for distributing traffic</li>
+            <li>Caching layers (e.g., Redis, Memcached)</li>
+            <li>Database sharding or replication</li>
+            <li>Asynchronous processing using queues</li>
+            <li>CDNs for static content</li>
+            <li>Microservices architecture for modularity and scalability</li>
+          </ul>
+        </div>
+        <button type="button" class="faq-toggle-icon">
+          <i class="fa-solid fa-chevron-down"></i>
+          <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+      </div>
+      <div class="faq">
+        <h3 class="faq-title">
+          How do you design for high availability and fault tolerance?
+        </h3>
+        <div class="faq-answer">
+          <ul>
+            <li>Deploy in multiple availability zones or regions</li>
+            <li>Use redundant systems and failover mechanisms</li>
+            <li>Implement health checks and auto-scaling</li>
+            <li>Design with graceful degradation and retry logic</li>
+          </ul>
+        </div>
+        <button type="button" class="faq-toggle-icon">
+          <i class="fa-solid fa-chevron-down"></i>
+          <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+      </div>
+      <div class="faq">
+        <h3 class="faq-title">
+          How do you handle data consistency in distributed systems?
+        </h3>
+        <div class="faq-answer">
+          <ul>
+            <li>
+              CAP theorem trade-offs (Consistency, Availability, Partition
+              tolerance)
+            </li>
+            <li>Eventual consistency models</li>
+            <li>Distributed transactions (e.g., 2PC, Saga pattern)</li>
+            <li>Idempotent operations to handle retries safely</li>
+          </ul>
+        </div>
+        <button type="button" class="faq-toggle-icon">
+          <i class="fa-solid fa-chevron-down"></i>
+          <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(189, 189, 189, 0.1);
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  margin: 30px 0 20px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.faq {
+  background-color: rgba(189, 189, 189, 0.1);
+  border-radius: 6px;
+  border: 1px solid rgba(128, 128, 128, 0.1);
+  box-shadow: 3px 3px 8px rgba(128, 128, 128, 0.3);
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.faq.active::before {
+  color: rgb(127, 255, 212);
+  content: "\f086";
+  font-family: "Font Awesome 7 Free";
+  font-size: 100px;
+  left: -30px;
+  opacity: 0.2;
+  position: absolute;
+  top: -20px;
+  z-index: 0;
+}
+
+.faq.active {
+  background-color: #fff;
+}
+
+.faq-title {
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin: 0 40px 0 0;
+  text-align: justify;
+}
+
+.faq-answer {
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  text-align: justify;
+  display: none;
+}
+
+.faq.active .faq-answer {
+  display: block;
+}
+
+.faq-toggle-icon {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+}
+
+.faq-toggle-icon i {
+  font-size: 20px;
+}
+
+.fa-circle-xmark {
+  display: none;
+}
+
+.faq.active .faq-toggle-icon .fa-circle-xmark {
+  display: block;
+}
+
+.faq.active .faq-toggle-icon .fa-chevron-down {
+  display: none;
+}
