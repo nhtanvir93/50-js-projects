@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+
+:root {
+  --fill-bg-color: rgb(139, 110, 243);
+  --text-color: rgb(255, 255, 255);
+  --border-color: rgb(48, 46, 153);
+  --numeric-font-size: 20px;
+  --numeric-font-weight: 600;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--fill-bg-color);
+}
+
+h1 {
+  margin: 20px 0 6px 0;
+  color: var(--text-color);
+}
+
+h3 {
+  color: var(--text-color);
+  margin: 0 0 20px 0;
+}
+
+.cup {
+  border-radius: 0 0 40px 40px;
+  border: 4px solid var(--border-color);
+  background-color: var(--text-color);
+  overflow: hidden;
+  box-shadow: 4px 4px 10px var(--border-color);
+}
+
+.cup-large {
+  width: 200px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--border-color);
+}
+
+.cup-small {
+  width: 50px;
+  height: 90px;
+  border-radius: 0 0 15px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hidden {
+  height: 0px;
+  visibility: hidden;
+}
+
+#remained {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
+#remained span {
+  font-size: var(--numeric-font-size);
+  font-weight: var(--numeric-font-weight);
+}
+
+#remained small {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#percentage {
+  font-size: var(--numeric-font-size);
+  font-weight: 600;
+  background-color: var(--fill-bg-color);
+  height: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.cups {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 264px;
+  align-items: center;
+  justify-content: center;
+}
+
+.task {
+  margin: 40px 0 10px;
+}
+
+.cup-small.fill {
+  background-color: var(--fill-bg-color);
+  color: var(--text-color);
+}
