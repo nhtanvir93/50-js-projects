@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+.ripple {
+  background-color: rgb(223, 36, 36);
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin: 12px;
+  padding: 12px 20px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.ripple-circle {
+  animation: ripple 0.6s ease;
+  background-color: #fff;
+  border-radius: 50%;
+  height: 30px;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+  width: 30px;
+}
+
+@keyframes ripple {
+  to {
+    opacity: 0;
+    transform: translate(-50%, 50%) scale(8);
+  }
+}
