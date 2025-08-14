@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Theme Clock</title>
+  </head>
+  <body>
+    <button type="button" class="toggle" id="toggle">Dark Theme</button>
+    <div class="clock-container">
+      <div class="clock">
+        <div class="needle needle-hour" id="hour"></div>
+        <div class="needle needle-minute" id="minute"></div>
+        <div class="needle needle-second" id="second"></div>
+        <div class="clock-center"></div>
+      </div>
+    </div>
+    <div class="datetime-details">
+      <div class="time"><span id="time"></span></div>
+      <div class="date"><span id="date"></span></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
