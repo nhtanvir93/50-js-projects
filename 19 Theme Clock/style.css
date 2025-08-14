@@ -26,6 +26,7 @@ body {
   overflow: hidden;
   gap: 40px;
   background-color: var(--primary-color);
+  letter-spacing: 1px;
 }
 
 .toggle {
@@ -55,22 +56,18 @@ body {
   top: 50%;
   left: 50%;
   transform-origin: bottom center;
-  transition: all 0.3s ease-in;
 }
 
 .needle-hour {
   height: 70px;
-  transform: translate(-50%, -100%) rotate(30deg);
   z-index: 3;
 }
 
 .needle-minute {
-  transform: translate(-50%, -100%) rotate(135deg);
   z-index: 4;
 }
 
 .needle-second {
-  transform: translate(-50%, -100%) rotate(270deg);
   background-color: var(--second-needle-color);
   z-index: 5;
 }

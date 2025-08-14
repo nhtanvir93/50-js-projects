@@ -7,15 +7,9 @@ const secondElement = document.getElementById("second");
 const timeElement = document.getElementById("time");
 const dateElement = document.getElementById("date");
 
-toggle.addEventListener("click", () => {
-  if (html.classList.contains("dark")) {
-    html.classList.remove("dark");
-    toggle.textContent = "Dark Theme";
-  } else {
-    html.classList.add("dark");
-    toggle.textContent = "Light Theme";
-  }
-});
+let lastHourDeg = 0;
+let lastMinuteDeg = 0;
+let lastSecondDeg = 0;
 
 const weekDays = [
   "Sunday",
@@ -41,6 +35,16 @@ const months = [
   "November",
   "December",
 ];
+
+toggle.addEventListener("click", () => {
+  if (html.classList.contains("dark")) {
+    html.classList.remove("dark");
+    toggle.textContent = "Dark Theme";
+  } else {
+    html.classList.add("dark");
+    toggle.textContent = "Light Theme";
+  }
+});
 
 const hourDegreeUnit = 360 / 12;
 const minSecDegreeUnit = 360 / 60;
@@ -78,15 +82,13 @@ function updateClock() {
   } ${amPm}`;
   dateElement.textContent = `${weekDay}, ${month} ${day}, ${year}`;
 
-  hourElement.style.transform = `translate(-50%, -100%) rotate(${
-    hour * hourDegreeUnit
-  }deg)`;
-  minuteElement.style.transform = `translate(-50%, -100%) rotate(${
-    minute * minSecDegreeUnit
-  }deg)`;
-  secondElement.style.transform = `translate(-50%, -100%) rotate(${
-    second * minSecDegreeUnit
-  }deg)`;
+  const hourDeg = ((hour % 12) + minute / 60) * hourDegreeUnit;
+  const minuteDeg = (minute + second / 60) * minSecDegreeUnit;
+  const secondDeg = second * minSecDegreeUnit;
+
+  hourElement.style.transform = `translate(-50%, -100%) rotate(${hourDeg}deg)`;
+  minuteElement.style.transform = `translate(-50%, -100%) rotate(${minuteDeg}deg)`;
+  secondElement.style.transform = `translate(-50%, -100%) rotate(${secondDeg}deg)`;
 }
 
 setInterval(() => updateClock(), 1000);
