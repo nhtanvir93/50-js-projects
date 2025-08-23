@@ -42,6 +42,7 @@ img {
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
+  margin-right: 12px;
 }
 
 .card-excerpt {
@@ -55,14 +56,13 @@ img {
 
 .author {
   display: flex;
-  gap: 12px;
 }
 
 .author-info {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: calc(100% - 12px);
+  width: calc(100% - 100px);
 }
 
 .author-name {
